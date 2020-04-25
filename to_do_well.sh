@@ -7,9 +7,20 @@ echo "--------------------------------------------------------------------------
 
 todo_well()
 {
-#    cat file | while read $line; do
-#    echo "$line"
-#    done
+    parts=(
+        '01_system.sh'
+        '02_codecs.sh'
+        '03_gsettings.sh'
+        '04_utilities.sh'
+        '05_software.sh'
+        '06_sshfs.sh'
+        '07_private_settings.sh'
+    )
+
+    for part in ${parts}; do
+        sudo chmod u+x ./parts/${part}
+        ./parts/${part}
+    done
 }
 
 todo_well
