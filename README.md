@@ -52,6 +52,8 @@ If you want to use it, I recommend editing the file 07_private_settings.sh, as w
 1. создание поддиректорий для sshfs;
 1. замена бесящего меня звука ошибки;
 
+##### php v7.4
+установка php v7.4 
 
 ### install / установка
 It is advisable to clone the repository before installation and upload it to the installation USB flash drive and run immediately after installing the system - there will be no need to manually install git
