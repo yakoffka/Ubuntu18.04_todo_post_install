@@ -9,6 +9,10 @@ install_system()
     sudo apt upgrade -y
     sudo apt clean
 
+
+    # установка Yaru/Communitheme
+    snap install communitheme
+
     # GNOME Shell extensions
     sudo apt-get install chrome-gnome-shell
 
