@@ -4,6 +4,7 @@
       <w>gsettings</w>
       <w>sshfs</w>
       <w>sysmonitor</w>
+      <w>virtualbox</w>
     </words>
   </dictionary>
 </component>

@@ -14,7 +14,9 @@ todo_well()
         '04_utilities.sh'
         '05_software.sh'
         '06_sshfs.sh'
-        '07_private_settings.sh'
+        '07_laravel_homestead.sh'
+        '08_php_7_4.sh'
+        '09_private_settings.sh'
     )
 
     for part in ${parts}; do

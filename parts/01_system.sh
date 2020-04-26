@@ -25,10 +25,11 @@ install_system()
     # indicator-sysmonitor
     sudo apt-get -y install curl git gir1.2-appindicator3-0.1
     sudo apt-get -y install python3-psutil # or sudo pip3 install -U psutil
-    git clone https://github.com/Super-Tree/indicator-sysmonitor.git tmp/indicator-sysmonitor
-    cd tmp/indicator-sysmonitor
+    git clone https://github.com/Super-Tree/indicator-sysmonitor.git temp/indicator-sysmonitor
+    cd temp/indicator-sysmonitor
     sudo make install
     # nohup indicator-sysmonitor &
+    cd ..
 
     # uninstall indicator-sysmonitor
     # cd tmp/indicator-sysmonitor

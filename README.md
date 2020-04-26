@@ -52,23 +52,33 @@ If you want to use it, I recommend editing the file 07_private_settings.sh, as w
 1. создание поддиректорий для sshfs;
 1. замена бесящего меня звука ошибки;
 
+##### laravel/homestead
+установка Oracle VirtualBox, vagrant, laravel/homestead box; 
+
 ##### php v7.4
 установка php v7.4 
 
 ### install / установка
+
+***note***
+перед установкой vagrant необходимо убедиться, что в файле 'parts/07_laravel_homestead.sh':
+1. указана последняя доступная на [сайте](https://www.vagrantup.com/downloads.html) для скачивания версия vagrant.
+1. указана последняя доступная на [сайте](https://www.virtualbox.org/wiki/Linux_Downloads) для скачивания версия virtualbox.
+
+
 It is advisable to clone the repository before installation and upload it to the installation USB flash drive and run immediately after installing the system - there will be no need to manually install git
 
 Желательно клонировать репозиторий до установки и залить его на установочную флешку и запускать сразу после установки системы - отпадет необходимость ручной установки git
 ```
 $ git clone https://github.com/yakoffka/Ubuntu18.04_todo_post_install.git
 $ cd Ubuntu18.04_todo_post_install/
-$ ./to_do_well.sh
+$ sudo ./to_do_well.sh
 ```
 ### after install / после установки
 
 после выполнения скрипта не забудьте выполнить:
 1. system-monitor -> Preferences -> General -> checked 'Run on startup';
-1. после зерезагрузки выбрать сессию 'Ubuntu with communitheme snap' как показано [здесь](https://github.com/ubuntu/yaru#using-a-legacy-yarucommunitheme-version-on-ubuntu-1804-bionic-beaver-via-snap-installation);
+1. после перезагрузки выбрать сессию 'Ubuntu with communitheme snap' как показано [здесь](https://github.com/ubuntu/yaru#using-a-legacy-yarucommunitheme-version-on-ubuntu-1804-bionic-beaver-via-snap-installation);
 1. добавить в браузер Mozilla расширения:
     1. Adblock Plus (free ad blocker);
     1. GNOME Shell integration (GNOME Shell extensions);
