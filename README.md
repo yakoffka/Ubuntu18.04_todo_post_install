@@ -61,9 +61,11 @@ If you want to use it, I recommend editing the file 07_private_settings.sh, as w
 ### install / установка
 
 ***note***
-перед установкой vagrant необходимо убедиться, что в файле 'parts/07_laravel_homestead.sh':
-1. указана последняя доступная на [сайте](https://www.vagrantup.com/downloads.html) для скачивания версия vagrant.
-1. указана последняя доступная на [сайте](https://www.virtualbox.org/wiki/Linux_Downloads) для скачивания версия virtualbox.
+перед установкой vagrant необходимо:
+1. убедиться, что в файле 'parts/07_laravel_homestead.sh':
+    1. указана последняя версия [vagrant](https://www.vagrantup.com/downloads.html), доступная для скачивания.
+    1. указана последняя версия [virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads), доступная для скачивания.
+1. изменить имя пользователя в '09_private_settings';
 
 
 It is advisable to clone the repository before installation and upload it to the installation USB flash drive and run immediately after installing the system - there will be no need to manually install git
@@ -85,3 +87,4 @@ $ sudo ./to_do_well.sh
     1. Stay secure with CyberGhost VPN Free Proxy;
     1. Video DownloadHelper;
 1. установить расширение [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/) - перенос заголовка и кнопок управления в меню приложений;
+1. отключить звук тревоги в settings -> sound -> sound effects.
