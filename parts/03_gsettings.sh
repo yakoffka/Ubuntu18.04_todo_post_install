@@ -17,8 +17,12 @@ tuning_gsettings()
     # gsettings get org.gnome.shell.extensions.dash-to-dock autohide
     gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 
-    # уменьшение значков приложений
+    # уменьшение значков приложений в dash панели
     gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
+
+    # уменьшение значков приложений на рабочем столе
+    # gsettings get org.gnome.nautilus.list-view default-zoom-level // smallest, smaller, small, standart, large, larger, largest
+    gsettings set org.gnome.nautilus.list-view default-zoom-level small
 
     # сворачивание приложений по клику в док-панели
     gsettings get org.gnome.shell.extensions.dash-to-dock click-action
