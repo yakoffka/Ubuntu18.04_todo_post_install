@@ -1,19 +1,19 @@
 #!/bin/bash
 
-install_sshfs_part()
-{
-    echo ""
-    echo "    -part 06: sshfs-"
+install_sshfs_part() {
+  part='part 06. sshfs'
+  printf "\n\n\n\n    - ${part} -\n"
 
+  printf "\n\n --- ${part}: установка sshfs\n"
+  sudo apt install -y sshfs
+  sshfs --version
 
-    dir="/media/$USER/servers"
-    echo "установка sshfs, создание директории '$dir' с владельцем '$USER' для монтирования удаленной файловой системы."
+  dir="/media/$USER/servers"
+  printf "\n\n --- ${part}: создание директории '$dir' для монтирования удаленной файловой системы\n"
+  sudo mkdir "$dir"
 
-    sudo apt install -y sshfs
-    sshfs --version
-
-    sudo mkdir "$dir"
-    sudo chown "$USER":"$USER" "$dir"
+  printf "\n\n --- ${part}: смена владельца директории '$dir'\n"
+  sudo chown "$USER":"$USER" "$dir"
 }
 
 install_sshfs_part

@@ -1,43 +1,49 @@
 #!/bin/bash
 
-install_private_part()
-{
-    echo ""
-    echo "    -part 07: private-"
+install_private_part() {
+  part='part 09. private'
+  printf "\n\n\n\n    - ${part} -\n"
 
-    # имя пользователя
-    name_user='yo'
 
-    #echo "git config"
-    git config --global user.email "yagithub@mail.ru"
-    git config --global user.name "yakoffka"
+  printf "\n\n --- ${part}: git config\n"
+  git config --global user.email "yagithub@mail.ru"
+  git config --global user.name "yakoffka"
 
-    dir="/media/${name_user}/servers/yakoffka"
-    #echo "создание директории '$dir' с владельцем '$USER' для монтирования удаленной файловой системы."
-    sudo mkdir "$dir"
-    sudo chown "${name_user}":"${name_user}" "$dir"
 
-    dir="/media/${name_user}/servers/ulibAsya"
-    #echo "создание директории '$dir' с владельцем '$USER' для монтирования удаленной файловой системы."
-    sudo mkdir "$dir"
-    sudo chown "${name_user}":"${name_user}" "$dir"
+  printf "\n\n --- ${part}: создание директории для монтирования удаленной файловой системы\n"
+  directories=(
+    ~/projects/
+    ~/projects/remote
+    ~/projects/remote/yakoffka
+    ~/projects/remote/ulibAsya
+    ~/projects/remote/kanatkom
+  )
+  for dir in ${directories[*]}; do
+    echo "создание директории '${dir}' с владельцем '${USER}'"
+    sudo mkdir -p ${dir}
+    sudo chown ${USER}:${USER} ${dir}
+  done
 
-    dir="/media/${name_user}/servers/kanatkom"
-    #echo "создание директории '$dir' с владельцем '$USER' для монтирования удаленной файловой системы."
-    sudo mkdir "$dir"
-    sudo chown "${name_user}":"${name_user}" "$dir"
 
-    # замена звука тревоги
-    sudo cp -f '../src/stereo/bell.ogg' '/usr/share/sounds/ubuntu/stereo/bell.ogg'
-    # !!! не работает для communitheme!!!
-    # sudo cp -f '/snap/communitheme/1987/share/sounds/communitheme/stereo/bell.ogg' '/snap/communitheme/1987/share/sounds/communitheme/stereo/bell_.ogg'
-    # sudo cp -f '../src/stereo/bell.ogg' '/snap/communitheme/1987/share/sounds/communitheme/stereo/bell.ogg'
-    #     cp: cannot stat '/snap/communitheme/1987/share/sounds/communitheme/stereo/bell.ogg': No such file or directory
-    #     cp: cannot create regular file '/snap/communitheme/1987/share/sounds/communitheme/stereo/bell.ogg': Read-only file system
+  printf "\n\n --- ${part}: замена звука тревоги\n"
+  sudo cp -f src/stereo/bell.ogg /usr/share/sounds/ubuntu/stereo/bell.ogg
+  # !!! не работает для communitheme!!!
 
-    sudo chown -R ${name_user}:${name_user} ~/Homestead
-    sudo chown -R ${name_user}:${name_user} ~/.vagrant.d
+
+  printf "\n\n --- ${part}: замена файлов Homestead.yaml and /etc/hosts\n"
+  sudo cp -f src/Homestead.yaml ~/Homestead/Homestead.yaml
+  printf "\n\n --- ${part}: git config\n"
+  sudo cp -f src/hosts /etc/hosts
+
+
+  printf "\n\n --- ${part}: добавление ssh ключей\n"
+  sudo cp -R src/ssh/* ~/.ssh
+
+
+  printf "\n\n --- ${part}: замена владельца для ~/Homestead\n"
+  sudo chown -R ${USER}:${USER} ~/Homestead
+  printf "\n\n --- ${part}: замена владельца для ~/.vagrant.d\n"
+  sudo chown -R ${USER}:${USER} ~/.vagrant.d
 }
 
-install_private_part
-
+install_private_part ${1}
