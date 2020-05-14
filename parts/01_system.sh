@@ -9,6 +9,7 @@ install_system() {
   sudo apt install -y ubuntu-restricted-extras
   sudo apt install -y libavcodec-extra
   sudo apt install -y libdvd-pkg
+  sudo dpkg-reconfigure libdvd-pkg
   sudo apt autoremove -y
 
   printf "\n\n --- ${part}: обновление компонентов системы\n"
