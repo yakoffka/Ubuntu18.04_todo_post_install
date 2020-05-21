@@ -2,6 +2,7 @@
   <dictionary name="yo">
     <words>
       <w>gsettings</w>
+      <w>postinstall</w>
       <w>sshfs</w>
       <w>sysmonitor</w>
       <w>virtualbox</w>

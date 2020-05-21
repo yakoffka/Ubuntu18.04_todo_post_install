@@ -34,6 +34,13 @@ If you want to use it, I recommend editing the file 07_private_settings.sh, as w
 1. увеличение продолжительности мигания курсора дольше 10 секунд в приложении GT (до 70 лет!)
 1. изменение формата времени; 
 
+##### docker part
+
+1. Install Docker Engine
+1. Post-installation steps
+1. Install Docker Compose
+
+
 ##### utilities part
 установка утилит (mc, curl, apt-transport-https, git)
 
@@ -65,7 +72,9 @@ If you want to use it, I recommend editing the file 07_private_settings.sh, as w
 1. убедиться, что в файле 'parts/07_laravel_homestead.sh':
     1. указана последняя версия [vagrant](https://www.vagrantup.com/downloads.html), доступная для скачивания.
     1. * указана последняя версия [virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads), доступная для скачивания.
-1. изменить имя пользователя в '09_private_settings';
+1. убедиться, что в файле 'parts/04_docker.sh':
+    1. * указана последняя версия [docker compose](https://docs.docker.com/compose/install/#install-compose), доступная для скачивания.
+1. изменить имя пользователя в '10_private_settings';
 
 
 It is advisable to clone the repository before installation and upload it to the installation USB flash drive and run immediately after installing the system - there will be no need to manually install git
