@@ -10,8 +10,8 @@ install_SoftWare() {
   printf "\n\n --- ${part}: установка inkscape\n"
   sudo apt install -y inkscape
 
-  printf "\n\n --- ${part}: установка slack\n"
-  sudo snap install slack --classic
+  #printf "\n\n --- ${part}: установка slack\n"
+  #sudo snap install slack --classic
 
   printf "\n\n --- ${part}: установка filezilla\n"
   sudo apt install filezilla

@@ -71,9 +71,9 @@ If you want to use it, I recommend editing the file 07_private_settings.sh, as w
 перед установкой vagrant необходимо:
 1. убедиться, что в файле 'parts/07_laravel_homestead.sh':
     1. указана последняя версия [vagrant](https://www.vagrantup.com/downloads.html), доступная для скачивания.
-    1. * указана последняя версия [virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads), доступная для скачивания.
+    1. указана последняя версия [virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads), доступная для скачивания.
 1. убедиться, что в файле 'parts/04_docker.sh':
-    1. * указана последняя версия [docker compose](https://docs.docker.com/compose/install/#install-compose), доступная для скачивания.
+    1. указана последняя версия [docker compose](https://docs.docker.com/compose/install/#install-compose), доступная для скачивания.
 1. изменить имя пользователя в '10_private_settings';
 
 

@@ -9,15 +9,15 @@ date "+%H:%M:%S %y.%m.%d"
 
 todo_well() {
   parts=(
-#    '01_system.sh'
-#    '03_gsettings.sh'
-    '04_docker.sh'
-#    '05_software.sh'
-#    '06_sshfs.sh'
-#    '07_laravel_homestead.sh'
-#    '08_php_7_4.sh'
-#    '09_hide_unwanted_sidebar_items.sh'
-#    '10_private_settings.sh'
+    '01_system.sh'
+    '03_gsettings.sh'
+#    '04_docker.sh'
+    '05_software.sh'
+    '06_sshfs.sh'
+    '07_laravel_homestead.sh'
+    '08_php_7_4.sh'
+    '09_hide_unwanted_sidebar_items.sh'
+    '10_private_settings.sh'
   )
 
   path=/etc/sudoers.d/${USER}

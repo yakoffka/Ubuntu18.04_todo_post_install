@@ -17,8 +17,8 @@ install_laravel_homestead() {
   # install vagrant
   printf "\n\n --- ${part}: установка vagrant\n"
   cd temp/
-  curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
-  sudo dpkg -i vagrant_2.2.9_x86_64.deb
+  curl -O https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.deb
+  sudo dpkg -i vagrant_2.2.10_x86_64.deb
   cd ..
 
   printf "\n\n --- ${part}: установка laravel/homestead\n"

@@ -8,12 +8,13 @@ install_sshfs_part() {
   sudo apt install -y sshfs
   sshfs --version
 
-  dir="/media/$USER/servers"
-  printf "\n\n --- ${part}: создание директории '$dir' для монтирования удаленной файловой системы\n"
-  sudo mkdir "$dir"
-
-  printf "\n\n --- ${part}: смена владельца директории '$dir'\n"
-  sudo chown "$USER":"$USER" "$dir"
+  # в данный момент использую директорию на другом диске.
+  #dir="/media/$USER/servers"
+  #printf "\n\n --- ${part}: создание директории '$dir' для монтирования удаленной файловой системы\n"
+  #sudo mkdir "$dir"
+  #
+  #printf "\n\n --- ${part}: смена владельца директории '$dir'\n"
+  #sudo chown "$USER":"$USER" "$dir"
 }
 
 install_sshfs_part
