@@ -55,4 +55,4 @@ install_system() {
   
 }
 
-install_system ${1}
+install_system "${1}"

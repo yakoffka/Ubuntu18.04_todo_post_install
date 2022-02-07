@@ -128,6 +128,13 @@ tuning_gsettings() {
   gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 0.0
   gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 23.983333333333334
 
+
+  # надоедливого сообщения
+  # gsettings get org.gnome.settings-daemon.plugins.power
+  # wget -O - https://gist.githubusercontent.com/guiambros/166039459a8579638b57f7d135505ab1/raw/733b8dd3ac3280bb76f48ba3dc04655df6d69025/silent-mouse.sh | bash -s -- --keyboard
+
+
+
   # disable screensaver
   gsettings set org.gnome.desktop.screensaver lock-enabled false
 
